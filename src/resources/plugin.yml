@@ -1,0 +1,17 @@
+name: BackLobby
+main: net.IchigyouRuri.BackLobby.Main
+version: "1.0.1"
+author: EmeraldGames Team
+api: ["1.0.14"]
+
+commands:
+  lobby:
+    aliases: [ "lobby","hub" ]
+    permission: lobby.command.lobby
+    description: Back Lobby 返回主大厅服务器
+    usage: "/lobby"
+
+permissions:
+  lobby.command.lobby:
+    description: Back Lobby 返回主大厅服务器
+    default: true
