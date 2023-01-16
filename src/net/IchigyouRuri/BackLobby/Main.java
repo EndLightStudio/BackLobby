@@ -34,8 +34,13 @@ public class Main extends PluginBase{
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         switch(command.getName()){
             case "lobby":
+                String meessage = Main.this.getConfig().getString("message.message");
+                boolean show_message = Main.this.getConfig().getBoolean("message.enable");
                 String ip = Main.this.getConfig().getString("ip");
                 int port = Main.this.getConfig().getInt("port");
+                if(show_message == true){
+                    ((Player)commandSender).sendMessage(meessage);
+                }
                 ((Player)commandSender).transfer(new InetSocketAddress(ip, port));
                 return true;
             default:

@@ -1,2 +1,6 @@
 ip: "127.0.0.1"
 port: 19132
+
+message:
+  enable: true
+  message: 传送回主大厅中
